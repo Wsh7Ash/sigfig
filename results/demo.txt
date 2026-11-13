@@ -1,0 +1,22 @@
+-- parsing --
+   1.230 -> value=     1.230 sigfigs=4 scientific=1.230e+0
+    1200 -> value=      1200 sigfigs=2 scientific=1.2e+3
+   1200. -> value=      1200 sigfigs=4 scientific=1.200e+3
+ 0.00450 -> value=   0.00450 sigfigs=3 scientific=4.50e-3
+  1.23e4 -> value=     12300 sigfigs=3 scientific=1.23e+4
+
+-- addition: fewest decimal places --
+12.50 + 2.5 = 15.0 (sigfigs=3)
+
+-- multiplication: fewest significant figures --
+2.5 * 4.20 = 11 (sigfigs=2)
+
+-- division --
+10.0 / 3.0 = 3.3
+
+-- uncertainty --
+1.230 ± 0.004 + 0.500 ± 0.002 = 1.730 ± 0.004
+
+-- rounding --
+round 2.345 to 3 sigfigs = 2.35
+scientific 12345 at 3 sigfigs = 1.23e+4

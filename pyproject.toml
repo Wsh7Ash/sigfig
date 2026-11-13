@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sigfig"
+version = "1.0.0"
+description = "Significant-figures measurement arithmetic with uncertainty propagation"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+keywords = ["significant-figures", "uncertainty", "decimal", "science"]
+dependencies = []
+
+[project.scripts]
+sigfig = "sigfig.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

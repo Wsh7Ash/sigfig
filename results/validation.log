@@ -1,0 +1,8 @@
+$ python -m pip install -e . pytest --quiet
+
+[notice] A new release of pip is available: 26.2.1 -> 26.3
+[notice] To update, run: python.exe -m pip install --upgrade pip
+$ python -m pytest tests -q
+...........                                                              [100%]
+11 passed in 0.04s
+$ bash -c PYTHONPATH=src PYTHONIOENCODING=utf-8 python examples/demo.py > results/demo.txt
